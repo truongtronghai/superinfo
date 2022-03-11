@@ -1,0 +1,133 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block title %}
+HoaDonAZ - Hỗ trợ thực hiện hóa đơn hộ kinh doanh
+{% endblock %}
+
+{% block page_content %}
+
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-16 w3-center light-green" id="home">
+    <h1 class="w3-text-white">HÓA ĐƠN AZ</h1>
+    <p>Dịch vụ hỗ trợ thực hiện Hóa Đơn Điện Tử có mã của Chi cục thuế <span class="w3-text-red">cấp theo từng lần phát sinh</span> cho Hộ Kinh Doanh, Cá Nhân Kinh Doanh</p>
+    <img src="{% static 'landing/hoa-don-dien-tu-doi-voi-ho-kinh-doanh.jpg' %}" alt="hoa don dien tu doi voi ho kinh doanh" class="w3-image" width="992">
+  </header>
+  <!-- Information Section -->
+  <div class="w3-content w3-justify w3-padding-16">
+      <h2 class="w3-text-light-grey" id="service">Dịch vụ của chúng tôi</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>
+          Việc áp dụng Hóa đơn điện tử cho Hộ kinh doanh là một bước tiến mới của Cơ quan thuế Việt Nam nhằm mang lại sự thuận tiện, dễ dàng cho Người nộp thuế trong việc xuất và quản lý hóa đơn bán hàng. Tuy nhiên, đối với Hộ kinh doanh theo phương pháp khoán hay Hộ kinh doanh nộp thuế theo từng lần phát sinh, hình thức xuất <strong>Hóa đơn điện tử có mã được Cơ quan thuế cấp theo từng lần phát sinh</strong> đòi hỏi Người nộp thuế cần am hiểu về sử dụng máy tính và nắm vững các quy trình cần thiết để hoàn tất việc xuất hóa đơn trên hệ thống Hóa đơn điện tử của Cơ quan thuế.
+     </p>
+     <p>
+         Chúng tôi cung cấp dịch vụ <strong>Hỗ Trợ Thực Hiện</strong> xuất hóa đơn điện tử có mã của Chi cục thuế cấp theo từng lần phát sinh cho các Hộ kinh doanh với mục tiêu mang đến cho quý khách hàng sự THUẬN TIỆN, NHANH CHÓNG, HIỆU QUẢ và TẬN TÂM.
+     </p>
+     <p>
+         Đối với quý khách có thể tự thực hiện công việc xuất hóa đơn như đã nêu ở trên, quý khách có thể tìm hiểu các thông tin liên quan và hướng dẫn thực hiện từ Cơ quan thuế tại phần <strong>THÔNG TIN</strong> và <strong>THAM KHẢO</strong> của trang web này.
+     </p>
+     <p>
+         Mọi thông tin chi tiết về dịch vụ hay có yêu cầu tư vấn quý khách đừng ngần ngại <a href="#contact" class="w3-btn w3-yellow">Liên hệ ngay</a> với chúng tôi hoặc vui lòng xem tại mục <strong>LIÊN HỆ</strong>.
+     </p>
+
+    <h2 class="w3-text-light-grey"  id="info">Vì sao hộ kinh doanh và cá nhân kinh doanh cần sử dụng Hóa đơn điện tử ?</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-white">
+              <li class="w3-padding-16">Phù hợp với xu hướng thương mại điện tử, thanh toán điện tử</li>
+              <li class="w3-dark-grey w3-padding-16">Người mua tin tưởng người bán hơn khi nhận Hóa đơn điện tử Có Mã của Chi cục thuế</li>
+              <li class="w3-padding-16">Có thể tra cứu ngay thông tin hóa đơn nhận được</li>
+              <li class="w3-dark-grey w3-padding-16">Không yêu cầu bảo quản như hóa đơn giấy</li>
+              <li class="w3-padding-16">Từ tháng <span class="w3-text-red"><strong>11/2021</strong></span>, Chi cục thuế đã triển  khai Hóa đơn điện tử có mã <span class="w3-text-red">Cấp Theo Từng Lần Phát Sinh</span> của Hộ kinh doanh tại 6 tỉnh, thành phố và tiếp đến là các tỉnh, thành phố còn lại.</li>
+            </ul>
+        </div>
+
+        <div class="w3-half w3-margin-bottom">
+          <img src="{% static 'landing/thuong-mai-dien-tu.jpg' %}" alt="thuong mai dien tu" class="w3-image">
+        </div>
+    </div>
+
+
+      <h2 class="w3-text-light-grey">Bạn sẽ cần sử dụng <span class="w3-text-black">Hóa Đơn Điện Tử có mã theo từng lần phát sinh</span> được cơ quan thuế cấp nếu:</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half w3-margin-bottom">
+              <ul class="w3-ul w3-white">
+                <li class="w3-padding-16"><strong>Hộ kinh doanh theo phương pháp khoán</strong></li>
+              </ul>
+          </div>
+
+          <div class="w3-half w3-margin-bottom">
+              <ul class="w3-ul w3-white">
+                <li class="w3-padding-16"><strong>Hộ kinh doanh nộp thuế theo từng lần phát sinh</strong></li>
+              </ul>
+          </div>
+      </div>
+
+        <h2 class="w3-text-light-grey"  id="reference_info">Thông tin tham khảo dành cho bạn là Hộ kinh doanh và Cá nhân sử dụng HĐDT cấp theo từng lần phát sinh:</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <div class="w3-row-padding" style="margin:0 -16px">
+            <table class="w3-table-all">
+            <thead>
+              <tr class="w3-dark-grey">
+                <th>Văn bản chính phủ</th>
+                <th>Nhấn vào để xem</th>
+                <th>Nhấn vào để tải về máy</th>
+              </tr>
+            </thead>
+            <tr class="w3-hover-grey">
+              <td>Quyết định số 1832/QĐ-BTC ngày 20/9/2021 của Bộ Tài chính về việc triển khai áp dụng hóa đơn điện tử tại Thành phố Hồ Chí Minh</td>
+              <td class="w3-center"><a href="https://www.gdt.gov.vn/wps/portal/!ut/p/z0/Tcq9DoIwGIXhW3Hp2PTjt3Q06KBojAuBLqQtBaqkQKxE714Ci9N5n-QQTgrCrZhNK5wZrOgXlzyu0nuW5lkOACzy4XQ95ofLPoabB-RMeNsPcruaxzTxPeFqsE5_HCna2u1WWIfgJarF687CSmH_cuzEOL2_CDZWS2tXG9sh8MH3EDRJEEEdSAxKUxwqCZhFNMSNVEwq7SWUMjI-efkDPv5y5w!!/p0/IZ7_CQKCVKV0009520IMEVDLA60OH2=CZ6_CQKCVKV0009520IMEVDLA60O10=MECTX!QCPgdtQCAcontentQCPsa_gdtQCPsa_vanbanQCPsa_vanbanphapquyQCPvanban_quyetdinhQCP2021QCPbe3b1f1d-224c-4545-a04d-9cec0dabdd9f==/" target="_blank">Xem</a></td>
+              <td class="w3-center">
+                  <a href="https://www.gdt.gov.vn/wps/wcm/connect/282da89e-cd31-4bc1-8f6c-a0c464f2cf9f/QD+1832.PDF?MOD=AJPERES&CACHEID=ROOTWORKSPACE282da89e-cd31-4bc1-8f6c-a0c464f2cf9f"  target="_blank"><i class="fa fa-download"></i></a>
+              </td>
+            </tr>
+            <tr class="w3-hover-grey">
+              <td>Thông tư số 78/2021/TT-BTC ngày 17/9/2021 của Bộ Tài chính</td>
+              <td class="w3-center"><a href="https://gdt.gov.vn/wps/portal/!ut/p/z0/Tco9D4IwFIXhv-LC2NzbSkFGgw6KxrgQ6EIuHwJKWoiF6L-XwOJ03ic5oCABpWlqa7Kt0dTNTpWXhfcojKMYEQMp8HQ9xofL3sMbRziDqjuTr9f2OQxqD6ow2lYfC0ld2s0CbR18UzZ72Yl0Tvov-4b6Yfw6uDKzjdG1HR0UKLiD7sPlLpc7VkmSzBW4ZeQLj2FQIPpBKYk86F8q_QFLcHoX/" target="_blank">Xem</a></td>
+              <td class="w3-center">
+                  <a href="https://gdt.gov.vn/wps/wcm/connect/9fc2f723-e6a7-4434-9f7a-3619d7c30f39/78_2021_TT-BTC.PDF?MOD=AJPERES&CACHEID=ROOTWORKSPACE9fc2f723-e6a7-4434-9f7a-3619d7c30f39"  target="_blank"><i class="fa fa-download"></i></a>
+              </td>
+            </tr>
+            <tr class="w3-hover-grey">
+              <td>Thông tư số 78/2021/TT-BTC ngày 17/9/2021 của Bộ Tài chính</td>
+              <td class="w3-center"><a href="https://www.youtube.com/watch?v=3A-x9IkiWEk" target="_blank">Xem</a></td>
+              <td class="w3-center">
+                  &nbsp;
+              </td>
+            </tr>
+            <tr class="w3-hover-grey">
+                  <td>Trang tra cứu Hóa đơn điện tử của Hộ kinh doanh</td>
+                  <td class="w3-center"><a href="https://hoadondientu.gdt.gov.vn/" target="_blank">Xem</a></td>
+                  <td class="w3-center">
+                      &nbsp;
+                  </td>
+            </tr>
+          </table>
+        </div>
+
+    {# include "./skill_reveal.html" #}
+
+    {# include './price_table.html' #}
+
+    {# include './testimonials.html' #}
+
+  <!-- End Information Section -->
+  </div>
+
+{# include './photos.html' #}
+
+{% include './contact.html' %}
+
+<!-- Footer -->
+{% include './footer.html' %}
+<!-- End footer -->
+
+</div>
+
+{% include "./flashmessagesmodal.html" %}
+
+{% endblock %}

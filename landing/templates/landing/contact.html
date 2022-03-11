@@ -1,0 +1,76 @@
+<!-- Contact Section -->
+<div class="w3-padding-16 w3-content" id="contact">
+  <h2 class="w3-text-light-grey">Liên hệ HoaDonAZ</h2>
+  <hr style="width:200px" class="w3-opacity">
+
+  <div class="w3-section">
+    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Địa chỉ: 20E, Hưng Phú, phường 9, quận 8, thành phố Hồ Chí Minh</p>
+    <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Điện thoại: <a href="tel:0909 555 634">0909 555 634</a></p>
+    <p>
+        <i class="fa fa-commenting fa-fw w3-text-white w3-xxlarge w3-margin-right" aria-hidden="true"></i>
+        <a href="http://zalo.me/0909555634" class="zalo" target="_blank"><img src="https://stc-zh5.zdn.vn/zalo-logo.png" width="64" /></a>
+    </p>
+    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> email: <a href="mailto:hoadonaz@gmail.com">tranthibichha@gmail.com</a></p>
+  </div><br>
+
+  <p>Hoặc gởi lời nhắn trực tiếp cho chúng tôi bằng khung bên dưới:</p>
+  <form action="{% url 'landing:index' %}" method='POST' novalidate>
+      {% csrf_token %}
+      {% comment %}
+      {% if contact_form.errors %}
+      <ul class='w3-ul'>
+          {% for err in contact_form.errors %}
+          <li class='w3-text-red'>
+              {{ err }}
+          </li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+     {% endcomment %}
+
+     {% if contact_form.contact_name.errors %} {# if email field has errors #}
+     <ul class='w3-ul'>
+         {% for err in contact_form.contact_name.errors %}
+         <li class='w3-text-red'>
+             {{ err }}
+         </li>
+         {% endfor %}
+     </ul>
+     {% endif %}
+
+     <p>{{ contact_form.contact_name }}</p>
+
+    {% if contact_form.contact_email.errors %} {# if email field has errors #}
+    <ul class='w3-ul'>
+        {% for err in contact_form.contact_email.errors %}
+        <li class='w3-text-red'>
+            {{ err }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p>{{ contact_form.contact_email }}</p>
+
+    <p>{{ contact_form.contact_phone }}</p>
+
+    {% if contact_form.contact_message.errors %} {# if email field has errors #}
+    <ul class='w3-ul'>
+        {% for err in contact_form.contact_message.errors %}
+        <li class='w3-text-red'>
+            {{ err }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p>{{ contact_form.contact_message }}</p>
+    <div class="g-recaptcha" data-sitekey="6LdQYcYeAAAAAI0KYXjqeIR6m30VpuTw18VKCfBx"></div><br/>
+    <p>
+      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+        <i class="fa fa-paper-plane"></i> Gởi tin nhắn
+      </button>
+    </p>
+  </form>
+<!-- End Contact Section -->
+</div>

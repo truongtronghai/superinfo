@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+body,h1 {font-family: "Raleway", sans-serif}
+h1:hover{
+    transform: scale(3);
+}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('images/forestbridge.jpg'); /*  do not start with '/' in url */
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
