@@ -42,7 +42,8 @@ def index(req):
         form = ContactForm()
 
     context_for_view = {
-        'contact_form': form
+        'contact_form': form,
+        'canonical': req.build_absolute_uri(req.path)
     }
 
     return render(req, 'landing/index.html', context_for_view)
