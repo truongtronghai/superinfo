@@ -14,7 +14,7 @@
   </div><br>
 
   <p>Hoặc gởi lời nhắn trực tiếp cho chúng tôi bằng khung bên dưới:</p>
-  <form action="{% url 'landing:index' %}" method='POST' novalidate>
+  <form action="{% url 'landing:landing' %}" method='POST' novalidate>
       {% csrf_token %}
       {% comment %}
       {% if contact_form.errors %}

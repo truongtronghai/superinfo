@@ -8,9 +8,13 @@ from django.contrib import messages  # using flash messages
 
 
 # Create your views here.
-
-
 def index(req):
+    return render(req, 'default/index.html', {})
+
+def anhoa(req):
+    return render(req, 'anhoa/index.html', {})
+
+def landing(req):
 
     result = False  # default value
 
@@ -50,7 +54,7 @@ def index(req):
 
 
 def page404(req):
-    return HttpResponseRedirect(reverse("landing:index"))
+    return HttpResponseRedirect(reverse("landing:landing"))
 
 
 def SendingEmail(form_name, form_email, form_msg, form_phone=''):

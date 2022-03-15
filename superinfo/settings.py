@@ -25,7 +25,7 @@ SESSION_COOKIE_SECURE = True
 SECRET_KEY = 'wiejde-1ns3cure-exoiefn2jsuper7p3info!px2#!(#q4pg%ut6r1e#046kv)v3c#l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
