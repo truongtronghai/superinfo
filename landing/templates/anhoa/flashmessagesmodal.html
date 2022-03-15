@@ -1,0 +1,19 @@
+<!-- Flash message -->
+{% if messages %}
+ <div class="w3-modal" id="flashmessagemodal" style="display: block !important;">
+     <div class="w3-modal-content">
+         {% for msg in messages %}
+             {% if msg.level_tag == 'error' %}
+             <div class="w3-red w3-container">
+             {% elif msg.level_tag == 'success' %}
+             <div class="w3-green w3-container">
+             {% endif %}
+                <span class="w3-button w3-display-topright w3-opacity" onclick="document.getElementById('flashmessagemodal').style.display='none'">&times;</span>
+                 <p class="w3-center">
+                     {{ msg|safe }}
+                 </p>
+             </div>
+         {% endfor %}
+     </div>
+</div>
+{% endif %}
