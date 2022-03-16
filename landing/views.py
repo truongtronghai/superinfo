@@ -9,13 +9,6 @@ from django.contrib import messages  # using flash messages
 
 # Create your views here.
 def index(req):
-    return render(req, 'default/index.html', {})
-
-def anhoa(req):
-    return render(req, 'anhoa/index.html', {})
-
-def landing(req):
-
     result = False  # default value
 
     if req.method == "POST":
