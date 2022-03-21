@@ -5,6 +5,10 @@ from django.urls import reverse
 from .forms import ContactForm
 from .models import Option
 from django.contrib import messages  # using flash messages
+# used for reCaptcha verifying at server side
+import urllib.request
+import json
+from django.conf import settings
 
 
 # Create your views here.
@@ -14,14 +18,30 @@ def index(req):
     if req.method == "POST":
         form = ContactForm(req.POST)
         if form.is_valid():
-            # sending information from contact form to system email
-            # gmail
-            result = SendingEmail(
-                form.cleaned_data["contact_name"],
-                form.cleaned_data["contact_email"],
-                form.cleaned_data["contact_message"],
-                form.cleaned_data["contact_phone"],
-                )
+            ''' Begin reCAPTCHA validation '''
+            recaptcha_response = req.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+            }
+            data = urllib.parse.urlencode(values).encode()
+            captcha_req = urllib.request.Request(url, data=data)
+            response = urllib.request.urlopen(captcha_req)
+            captcha_result = json.loads(response.read().decode())
+            ''' End reCAPTCHA validation '''
+
+            if captcha_result['success']:
+                # sending information from contact form to system email
+                # gmail
+                result = SendingEmail(
+                    form.cleaned_data["contact_name"],
+                    form.cleaned_data["contact_email"],
+                    form.cleaned_data["contact_message"],
+                    form.cleaned_data["contact_phone"],
+                    )
+            else:
+                result = False
         else:
             result = False
 
