@@ -22,7 +22,7 @@ def index(req):
             recaptcha_response = req.POST.get('g-recaptcha-response')
             url = 'https://www.google.com/recaptcha/api/siteverify'
             values = {
-                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'secret': Option.objects.get(name='GOOGLE_RECAPTCHA_SECRET_KEY').value,
                 'response': recaptcha_response
             }
             data = urllib.parse.urlencode(values).encode()

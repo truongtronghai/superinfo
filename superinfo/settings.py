@@ -134,5 +134,3 @@ EMAIL_HOST_USER = 'truongtronghai@gmail.com'
 EMAIL_HOST_PASSWORD = 'jvkabchjytowrpco'  # past the key or password app here
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# reCaptcha Key for server
-GOOGLE_RECAPTCHA_SECRET_KEY = "6LdQYcYeAAAAAEkI4QnUFhiU23BdeM_C6ru52HYd"
